@@ -1,6 +1,7 @@
 babel
 python-dateutil==2.6.0
 flask-moment
-flask-wtf
 flask-sqlalchemy
 flask-migrate
+flask-wtf==0.14.3
+flask-security
