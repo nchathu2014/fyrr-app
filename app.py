@@ -86,8 +86,9 @@ def show_venue(venue_id):
   data = []
   for venue in venue_data:
     venue_data = []
-    u_shows = db.session.query(Show).filter(Show.venue_id==venue.id).filter(Show.start_time>datetime.now()).all()
-    p_shows = db.session.query(Show).filter(Show.venue_id==venue.id).filter(Show.start_time<datetime.now()).all()
+    u_shows = db.session.query(Show).join(Artist).filter(Show.venue_id==venue_id).filter(Show.start_time>datetime.now()).all()
+    p_shows = db.session.query(Show).join(Artist).filter(Show.venue_id==venue_id).filter(Show.start_time<datetime.now()).all()
+ 
 
     upcoming_shows = []
     for show in u_shows:
