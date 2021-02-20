@@ -25,8 +25,23 @@
       </div>
       
       <div class="form-group">
+        <label for="genres">Website</label>
+        {{ form.website(class_ = 'form-control', placeholder='http://', autofocus = true) }} <!-- removed id=form.state-->
+      </div>
+
+      <div class="form-group">
         <label for="image-link">Image Link</label>
         {{ form.image_link(class_ = 'form-control', placeholder='http://', autofocus = true) }} <!-- removed id=form.state-->
+      </div>
+      
+      <div class="form-group">
+        <label for="seeking-talent">Seeking Talent</label>
+        {{ form.seeking_talent(class_ = 'form-control', placeholder='http://', autofocus = true) }} <!--remove id=form.state-->
+      </div>
+
+      <div class="form-group">
+        <label for="seeking-description">Seeking Description</label>
+        {{ form.seeking_description(class_ = 'form-control', placeholder='Your description here ...', autofocus = true) }} <!--remove id=form.state-->
       </div>
 
       <div class="form-group">
